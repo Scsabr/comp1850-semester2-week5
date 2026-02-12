@@ -65,7 +65,7 @@ int main(void) {
     scanf("%d", &age);
 
     printf("Enter monthly income: ");
-    scanf("%f", &income);
+    scanf("%lf", &income);
 
     printf("Enter credit score: ");
     scanf("%d", &credit_score);
