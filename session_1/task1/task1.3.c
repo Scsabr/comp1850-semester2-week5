@@ -16,7 +16,26 @@
 
 int main(void) {
 
-	// complete your code here
+    int number;
+	char buffer[100];
+
+    printf("Enter number: ");
+    fgets(buffer,100,stdin);
+	int check = sscanf(buffer,"%d ", &number);
+	if(check-1)
+	{
+		printf("Error: Invalid number.\n");
+		return 1;
+	}
+
+    if ( number%3==0 && number%5==0 )
+    {
+        printf("The number is divisible by 3 and 5\n");
+    }
+    else
+    {
+        printf("The number is not divisible by both 3 and 5\n");
+    }
 
 	return 0;
 }

@@ -11,6 +11,8 @@ int main(void) {
     // Define some simple boolean variables
     bool a = true;
     bool b = false;
+
+
     
     printf("===== Basic Boolean Operations =====\n");
     

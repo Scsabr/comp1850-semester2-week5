@@ -23,16 +23,31 @@ int main(void) {
 	
     float account_balance;
 	float purchase_amount;
+
+	char buffer[100];
+	int check;
 	
 	printf("Enter account balance: ");
-    scanf("%f", &account_balance);
+	fgets(buffer,100,stdin);
+	check = sscanf(buffer,"%f ", &account_balance);
+	if(check-1)
+	{
+		printf("Error: Invalid balance.\n");
+		return 1;
+	}
 	
 	printf("Enter purchase amount: ");
-    scanf("%f", &purchase_amount);
+    fgets(buffer,100,stdin);
+	check = sscanf(buffer,"%f ", &purchase_amount);
+	if(check-1)
+	{
+		printf("Error: Invalid purchase amount.\n");
+		return 1;
+	}
 	
 	// Complete your code here
-	if (){  // todo
-		// todo
+	if (account_balance >= purchase_amount){  
+		account_balance -= purchase_amount;
 		printf("Transaction Approved. Remaining balance %.2f\n", account_balance);
 	}
 	else{
