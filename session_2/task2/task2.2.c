@@ -7,12 +7,20 @@
  * - use fgets() + newline removal
  * - use strcmp for string comparison
  */
- 
- #include <stdio.h>
- #include <string.h>
- 
- int main(void) {
-	 
-	 
-	 return 0;
- }
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char buffer[100];
+	do
+	{
+		printf("Enter a message: ");
+		fgets(buffer, 100, stdin);
+		buffer[strcspn(buffer, "\n")] = '\0';
+		printf("You said: %s\n", buffer);
+	} while (strcmp("quit", buffer));
+
+	return 0;
+}
